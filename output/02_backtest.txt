@@ -1,0 +1,42 @@
+Rolling-origin evaluation: origins 1994 - 2023 | horizons 1 - 5 | forecasts scored: 980 
+
+Overall (all horizons pooled):
+               model   MAE  RMSE cover80 cover95
+ Random walk + drift  3.55  4.43   0.836   0.986
+               Theta  3.59  4.43   0.800   0.986
+ Naive (random walk)  3.68  4.51   0.814   0.979
+                 ETS  3.69  4.51   0.779   0.971
+          auto.arima  4.23  5.44   0.671   0.821
+   NNAR (neural net)  5.30  7.42      NA      NA
+     Historical mean 10.09 11.37   0.207   0.564
+
+MAE by horizon (percentage points):
+               model  h=1  h=2   h=3   h=4   h=5
+ Random walk + drift 1.88 3.03  4.00  4.40  4.69
+ Naive (random walk) 1.88 3.10  4.15  4.57  4.97
+                 ETS 1.89 3.11  4.15  4.57  4.98
+               Theta 1.89 3.06  4.03  4.42  4.82
+          auto.arima 2.04 3.53  4.61  5.31  5.99
+   NNAR (neural net) 2.56 3.94  5.46  6.98  8.07
+     Historical mean 9.27 9.63 10.04 10.57 11.11
+DM test, Random walk + drift  vs naive (h=1): DM = -0.183, p = 0.856
+DM test, Historical mean      vs naive (h=1): DM =  6.124, p = 0.000
+DM test, auto.arima           vs naive (h=1): DM =  1.139, p = 0.264
+DM test, ETS                  vs naive (h=1): DM =  1.395, p = 0.174
+DM test, Theta                vs naive (h=1): DM =  0.353, p = 0.727
+DM test, NNAR (neural net)    vs naive (h=1): DM =  2.673, p = 0.012
+
+auto.arima selection by forecast origin:
+                           model    origin
+ ARIMA(0,0,1) with non-zero mean 2005-2005
+                    ARIMA(0,1,0) 2008-2023
+ ARIMA(1,0,0) with non-zero mean 1994-2004
+ ARIMA(1,0,1) with non-zero mean 2003-2006
+ ARIMA(2,0,1) with non-zero mean 2007-2007
+
+ARIMA(0,0,1) with non-zero mean                    ARIMA(0,1,0) 
+                              1                              16 
+ARIMA(1,0,0) with non-zero mean ARIMA(1,0,1) with non-zero mean 
+                             10                               2 
+ARIMA(2,0,1) with non-zero mean 
+                              1 

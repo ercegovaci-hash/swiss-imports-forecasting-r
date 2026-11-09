@@ -1,0 +1,81 @@
+Series: 1970 - 2024  n = 55 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  34.44   41.11   44.11   46.89   54.26   62.36 
+
+	Box-Ljung test
+
+data:  y
+X-squared = 237.31, df = 10, p-value < 2.2e-16
+
+
+	Augmented Dickey-Fuller Test
+
+data:  y
+Dickey-Fuller = -1.8291, Lag order = 3, p-value = 0.6434
+alternative hypothesis: stationary
+
+
+	Augmented Dickey-Fuller Test
+
+data:  dy
+Dickey-Fuller = -4.0123, Lag order = 3, p-value = 0.01566
+alternative hypothesis: stationary
+
+
+	Box-Ljung test
+
+data:  dy
+X-squared = 6.073, df = 5, p-value = 0.2992
+
+
+	Box-Ljung test
+
+data:  dy
+X-squared = 7.3409, df = 10, p-value = 0.6929
+
+
+	Box-Ljung test
+
+data:  dy
+X-squared = 14.528, df = 15, p-value = 0.4859
+
+ndiffs (KPSS-based): 1 
+         model k     AIC    AICc     BIC
+4 ARIMA(0,1,0) 1 260.185 260.262 262.174
+2 ARIMA(0,1,1) 2 262.128 262.363 266.105
+1 ARIMA(1,1,0) 2 262.157 262.393 266.135
+3 ARIMA(1,1,1) 3 263.957 264.437 269.923
+ARIMA(1,1,0) : coef = 0.0227  s.e. = 0.1356 
+ARIMA(0,1,1) : coef = 0.0476  s.e. = 0.2012 
+Series: y 
+ARIMA(0,1,0) 
+
+sigma^2 = 6.982:  log likelihood = -129.09
+AIC=260.19   AICc=260.26   BIC=262.17
+                    ME     RMSE      MAE     MPE     MAPE      MASE        ACF1
+Training set 0.3711072 2.618216 2.015462 0.55504 4.444408 0.9821865 0.002131596
+
+	Box-Ljung test
+
+data:  res
+X-squared = 7.4914, df = 10, p-value = 0.6784
+
+ARCH LM test (10 lags): Chi-squared = 6.8963, df = 10, p-value = 0.7352
+
+	Shapiro-Wilk normality test
+
+data:  res
+W = 0.9685, p-value = 0.1575
+
+     Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
+2025        61.9362 58.54990 65.32251 56.75730 67.11511
+2026        61.9362 57.14725 66.72516 54.61213 69.26028
+2027        61.9362 56.07095 67.80145 52.96608 70.90633
+2028        61.9362 55.16360 68.70881 51.57839 72.29401
+2029        61.9362 54.36420 69.50821 50.35582 73.51659
+2030        61.9362 53.64149 70.23092 49.25053 74.62188
+2031        61.9362 52.97689 70.89552 48.23411 75.63830
+2032        61.9362 52.35829 71.51412 47.28805 76.58436
+2033        61.9362 51.77729 72.09512 46.39949 77.47292
+2034        61.9362 51.22777 72.64464 45.55907 78.31334
+2035        61.9362 50.70510 73.16730 44.75972 79.11269

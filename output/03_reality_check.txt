@@ -1,0 +1,25 @@
+Revision (new - old), percentage points
+  mean absolute revision 1970-2024: 0.36
+  mean absolute revision 2015-2024: 0.82
+Time Series:
+Start = 2018 
+End = 2024 
+Frequency = 1 
+       old   new revision
+2018 56.95 56.76    -0.19
+2019 57.16 56.87    -0.29
+2020 57.69 57.88     0.19
+2021 58.90 58.06    -0.84
+2022 62.36 61.27    -1.09
+2023 61.99 59.42    -2.57
+2024 61.94 59.15    -2.78
+
+Forecast from the July 2025 release (original model)
+  point 61.94 | 80% [58.55, 65.32] | 95% [56.76, 67.12]
+  actual 2025 = 69.11 -> error +7.17 pp = 2.7 residual standard deviations
+
+Same model refit on the July 2026 release up to 2024
+  point 59.15 | 80% [55.76, 62.54] | 95% [53.97, 64.34]
+  actual 2025 = 69.11 -> error +9.96 pp = 3.8 residual standard deviations
+
+Change 2024->2025: +9.96 pp. Largest earlier yearly change: -7.08 pp (1975).
